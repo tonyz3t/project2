@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home - SlackClone
+{% endblock%}
+
+{% block script %}
+    <script src="{{ url_for('static', filename='LoginScript.js') }}">
+
+    </script>
+{% endblock %}
+
+{% block body %}
+    <h1>Welcome to Slack</h1>
+
+    <h3>Enter a display name</h3>
+
+    <div id="user-form-block">
+        <form action="{{ url_for('index') }}" method="post">
+            <input name="username" placeholder="Display Name" required>
+            <button>Sign Up</button>
+        </form>
+    </div>
+{% endblock %}
