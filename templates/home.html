@@ -16,9 +16,14 @@
     <h3>Enter a display name</h3>
 
     <div id="user-form-block">
-        <form action="{{ url_for('index') }}" method="post">
-            <input name="username" placeholder="Display Name" required>
-            <button>Sign Up</button>
+        <form id="form">
+            <input id="username" placeholder="Display Name" required>
+            <input type="submit" value="Sign Up">
         </form>
     </div>
+
+    <input id="displayname">
+    <button>Sign Up</button>
+
+    <h2 id="name"></h1>
 {% endblock %}

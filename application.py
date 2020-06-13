@@ -1,6 +1,6 @@
 import os
 
-from flask import Flask, render_template
+from flask import Flask, render_template, request, jsonify
 from flask_socketio import SocketIO, emit
 
 app = Flask(__name__)
@@ -10,4 +10,8 @@ socketio = SocketIO(app)
 
 @app.route("/")
 def index():
-    return render_template("home.html")
+        return render_template("start.html")
+
+@app.route("/start", methods=["POST"])
+def start():
+    return jsonify({"Success": True})
